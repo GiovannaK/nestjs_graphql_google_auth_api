@@ -2,6 +2,22 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type User {
+  name: String!
+  email: String!
+  isRegisteredWithGoogle: Boolean!
+  isDeleted: Boolean!
+}
+
 type Query {
   sayHello: String!
+}  
+
+type Mutation {
+  createUser(data: CreateUserDto!): User!
+}
+
+input CreateUserDto {
+  name: String!
+  email: String!
 }

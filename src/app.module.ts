@@ -12,6 +12,8 @@ import { UserModule } from './user/user.module';
     ConfigModule.forRoot({
       validationSchema: Joi.object({
         MONGO_URI: Joi.string().required(),
+        GOOGLE_AUTH_CLIENT_ID: Joi.string().required(),
+        GOOGLE_AUTH_CLIENT_SECRET: Joi.string().required(),
       }),
     }),
     MongooseModule.forRoot(process.env.MONGO_URI),
